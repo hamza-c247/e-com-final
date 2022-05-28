@@ -6,6 +6,7 @@ import { Dropdown } from "react-bootstrap";
 
 function Headertop() {
   let user = JSON.parse(localStorage.getItem("user-info"));
+  let loged= JSON.parse(localStorage.getItem("username"))
   const history = useHistory();
 
   // logout function
@@ -30,7 +31,7 @@ function Headertop() {
     <>
       <div className=" top-container">
         <div className=" d-flex header-top">
-          {localStorage.getItem("user-info") ? (
+          {localStorage.getItem("user-info")||localStorage.getItem("id") ? (
             <>
               <div className="dropdown user-info">
                 <Link
@@ -46,7 +47,7 @@ function Headertop() {
                     src="/assets/images/logo/user1.png"
                     alt=""
                   />
-                  {user && user.name}
+                  {localStorage.getItem("id")?loged:user.name}
                 </Link>
 
                 <ul

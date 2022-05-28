@@ -47,7 +47,7 @@ function Singleproduct() {
 
   useEffect(() => {
     const getproductdata = async () => {
-      const response = await fetch(`http://802d-183-87-13-43.ngrok.io/watches/${id}`);
+      const response = await fetch(`http://localhost:3344/watches/${id}`);
       setProduct(await response.json());
     };
 

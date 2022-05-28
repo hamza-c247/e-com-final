@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { motion } from "framer-motion";
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 const Mycart = ({ adjustQty }) => {
   const state = useSelector((state) => state.handleCart);
@@ -62,17 +64,41 @@ const Mycart = ({ adjustQty }) => {
     );
   };
 
+
+ 
+
+
   const CartItems = (cartitem, idx) => {
+    const submit = () => {
+
+      confirmAlert({
+        title: 'Confirm to Remove',
+        message: 'remove this item ?',
+        className: 'modal',
+        buttons: [
+          {
+            label: 'Remove',
+            className: "modalbtn-delete",
+            onClick: () => handleclose(cartitem)
+          },
+          {
+            label: 'Back',
+            className: "modalbtn-back"
+            // onClick: () => 
+          }
+        ]
+      });
+    }
     return (
       <>
-        <div className="" key={idx}>
+        <div className="" >
           <div className=" cart-item-wrapper">
             <div className="row ">
               <div className="col-md-4 ">
                 <img className="cart-img" src={cartitem.image} />
               </div>
 
-              <div className="col-md-4">
+              <div className="col-md-4" key={idx}>
                 <h5>{cartitem.title}</h5>
 
                 <p>
@@ -93,13 +119,13 @@ const Mycart = ({ adjustQty }) => {
                 <div>
                   <button
                     className="counter-btn"
-                    onClick={() => {
+                    onClick={() => {{
                       if (cartitem.quantity > 1) {
                         dispatch({ type: "DECREASE", payload: cartitem });
                       } else {
                         dispatch(handleclose(cartitem));
                       }
-                    }}
+                    };{submit()}}}
                   >
                     -
                   </button>
@@ -119,7 +145,8 @@ const Mycart = ({ adjustQty }) => {
 
               <div className="col-md-4 bin-wrapper">
                 <button
-                  onClick={() => handleclose(cartitem)}
+                // you can directly use handleclose function rather than modal
+                  onClick={submit}
                   className="bin-btn"
                 >
                   <img

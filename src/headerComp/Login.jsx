@@ -3,22 +3,54 @@ import Headertop from "./Headertop";
 import { useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+
 function Login() {
+  const [username, setusername] = useState("");
+  const [password, setPassword] = useState("");
+
   const history = useHistory();
   useEffect(() => {
-    if (localStorage.getItem("user-info")) {
+    if (localStorage.getItem("username")) {
       history.push("/");
     }
+    else if(!localStorage.getItem("username")){
+      history.push("/login")
+    }
   }, []);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    let item = { username, password };
+    console.warn(item);
+
+    let result = await fetch("https://fakestoreapi.com/auth/login", {
+      method: "POST",
+      body: JSON.stringify(item),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+    result = await result.json();
+    console.warn("result", result);
+
+    if (result.token) {
+      localStorage.setItem("id", JSON.stringify(result));
+      console.log(result);
+      localStorage.setItem("username", JSON.stringify(username));
+      localStorage.setItem("password", JSON.stringify(password));
+      history.push("/");
+    }
+  }
+
   return (
     <>
       <Headertop />
-     
-      {/* <form className="sign-up-form">
+
+      <form className="sign-up-form" onSubmit={(e) => handleSubmit(e)}>
         <div className="form-heading ">
           <h4>
-            {" "}
-            <img src="assets/images/logo/logotitan.svg" /> Titan SignUp
+            <img src="assets/images/logo/logotitan.svg" /> Titan Login
           </h4>
         </div>
         <div className="input-wrapper">
@@ -27,50 +59,25 @@ function Login() {
             id="user"
             type="text"
             name="fullname"
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-              {
-                handleChange(e);
-              }
-            }}
+            onChange={(e) => setusername(e.target.value)}
+            value={username}
           ></input>
         </div>
 
-        <div className="input-wrapper">
-          <label htmlFor="mail"> Email</label>
-          <input
-            id="mail"
-            type="email"
-            name="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-              {
-                handleChange(e);
-              }
-            }}
-          ></input>
-        </div>
         <div className="input-wrapper">
           <label htmlFor="pass"> Password</label>
           <input
             id="pass"
             type="password"
             name="password"
+            onChange={(e) => setPassword(e.target.value)}
             value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-              {
-                handleChange(e);
-              }
-            }}
           ></input>
         </div>
         <div className="sign-up-btn">
-          <button onClick={(e) => signUp(e)}> SIGN UP</button>
+          <button> LOG IN</button>
         </div>
-      </form> */}
+      </form>
     </>
   );
 }

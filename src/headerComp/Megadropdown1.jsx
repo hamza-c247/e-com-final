@@ -33,32 +33,32 @@ function Megadropdown1() {
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-Women.webp"
                       alt=""
-                    />
-                    WOMEN
+                    /> WOMEN
+                    
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-Men.webp"
                       alt=""
-                    />
-                    MEN
+                    /> MEN
+                   
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-Kids.webp"
                       alt=""
-                    />
-                    KIDS
+                    /> KIDS
+                   
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-Couple.webp"
                       alt=""
-                    />
-                    COUPLES
+                    /> COUPLES
+                    
                   </Link>
                 </li>
                 <li className="view-all-btn">
@@ -78,32 +78,32 @@ function Megadropdown1() {
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-Automatic.webp"
                       alt=""
-                    />
-                    MECHANICAL
+                    /> MECHANICAL
+                   
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-LeatherStrap.webp"
                       alt=""
-                    />
-                    LEATHER
+                    /> LEATHER
+                    
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-Minimalist.webp"
                       alt=""
-                    />
-                    METAL
+                    /> METAL
+                  
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-MetalStrap.webp"
                       alt=""
-                    />
-                    MINIMALIST
+                    /> MINIMALIST
+                   
                   </Link>
                 </li>
                 <li className="view-all-btn">
@@ -123,32 +123,32 @@ function Megadropdown1() {
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_180x180-Minimals_Alt.webp"
                       alt=""
-                    />
-                    MINIMALS
+                    /> MINIMALS
+                    
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-MoJ.webp"
                       alt=""
-                    />
-                    RAGA
+                    /> RAGA
+                   
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_180x180-Solidarity.webp"
                       alt=""
-                    />
-                    SOLIDARITY
+                    /> SOLIDARITY
+                    
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-Animalia.webp"
                       alt=""
-                    />
-                    ANIMALIA
+                    /> ANIMALIA
+                    
                   </Link>
                 </li>
                 <li className="view-all-btn">
@@ -168,24 +168,24 @@ function Megadropdown1() {
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-MetalStrap.webp"
                       alt=""
-                    />
-                    SPORTY
+                    /> SPORTY
+                    
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-Men.webp"
                       alt=""
-                    />
-                    GLAM
+                    /> GLAM
+                    
                   </Link>
                   <Link to="">
                     <img
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-Women.webp"
                       alt=""
-                    />
-                    AUTOMATICS
+                    /> AUTOMATICS
+                   
                   </Link>
                 </li>
                 <Link to="">
@@ -193,8 +193,8 @@ function Megadropdown1() {
                       className="watch-products"
                       src="/assets/images/products/Watch_Icons_160x160-Men.webp"
                       alt=""
-                    />
-                    GLAM
+                    /> GLAM
+                    
                   </Link>
                 <li className="view-all-btn">
                   <Link to="">VIEW ALL</Link>

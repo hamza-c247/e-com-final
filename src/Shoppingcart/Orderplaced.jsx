@@ -27,12 +27,11 @@ function Orderplaced() {
         ref={confettiRef}>
         <h1>Order Placed Successfully</h1>
         <h3>Thank you for Shopping</h3>
-        <Link to="/products"> Continue Shopping</Link>
+        <a href="/products"> Continue Shopping</a>
         <Confetti
           recycle={show}
           numberOfPieces={500}
-          width={5000}
-          height={1000}
+         className="conf"
         />
       </div>
     </div>

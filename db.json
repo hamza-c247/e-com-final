@@ -1,4 +1,42 @@
 {
+  "Register": [
+    {
+      "name": "HAMZA KHAN",
+      "email": "hamzakahn9584@gmail.com",
+      "password": "adawdawdw3",
+      "id": 103
+    },
+    {
+      "name": "HAMZA KHAN",
+      "email": "hamzakahn9584@gmail.com",
+      "password": "asdasdawdaw3",
+      "id": 104
+    },
+    {
+      "name": "HAMZA KHAN",
+      "email": "hamzakahn9584@gmail.com",
+      "password": "hahdhadhawd2",
+      "id": 105
+    },
+    {
+      "name": "HAMZA KHAN",
+      "email": "hamzakahn9584@gmail.com",
+      "password": "sfsfsefsefsefse3",
+      "id": 106
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 107
+    },
+    {
+      "name": "hamzakja",
+      "email": "awdawda@gmail.com",
+      "password": "awdawd22",
+      "id": 108
+    }
+  ],
   "watches": [
     {
       "id": 1,
@@ -960,6 +998,5 @@
       "image5": "/assets/images/products/p46.2.webp",
       "image6": "/assets/images/products/p46.3.webp"
     }
-   
   ]
 }

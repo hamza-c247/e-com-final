@@ -8,9 +8,10 @@ function Protectedroute(props) {
   let history = useHistory()
 
   useEffect(()=>{
-      if(!localStorage.getItem("user-info")){
+      if(!localStorage.getItem("user-info")&& !localStorage.getItem("id")){
           history.push("/signup")
       }
+      
   })
    
   return (

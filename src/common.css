@@ -195,3 +195,21 @@ h2 {
   text-transform: capitalize;
   
 }
+
+
+.conf{
+  width: 100vw;
+  height: 50vw;
+}
+
+.success{
+ 
+  color: green;
+  font-size: .9rem !important;
+  font-weight: 600;
+}
+.error{
+  color: red;
+  font-size: .9rem !important;
+  font-weight: 600;
+}

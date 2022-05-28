@@ -256,7 +256,7 @@
 
 .watch-products {
   width: 6rem;
-
+ border: 1px solid var(--border-color);
   margin-top: 1.5rem;
 }
 .watch-li-block a {
@@ -1124,6 +1124,28 @@ footer a {
   color: white !important
 }
 
+.modalbtn-delete{
+  background-color: var(--main-color) !important;
+  width: 50% !important;
+  padding: 15px 2rem !important
+}
+.react-confirm-alert-body{
+  font-family: "Quicksand", sans-serif !important;
+  width: 542px !important;
+  
+}
+.modalbtn-back{
+  width: 50% !important;
+  padding: 15px 2rem !important
+}
+.react-confirm-alert-body h1{
+  padding: 2rem 0px;
+}
+.react-confirm-alert-button-group{
+  padding: 2rem 0px;
+  margin: 0px !important
+}
+
 
 
 
@@ -1534,4 +1556,22 @@ footer a {
     top: -15px !important;
     left: 0rem !important;
   }
+
+  /* confetti */
+
+  
+.conf{
+  width: 100vw !important;
+  height: 200vw !important
+}
+
+/* modal */
+
+.react-confirm-alert-body {
+  
+  width: 307px !important;
+}
+
+
+
 }

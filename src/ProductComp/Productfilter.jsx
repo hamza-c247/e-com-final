@@ -49,7 +49,7 @@ function Productfilter({ setCart, cart }) {
   useEffect(() => {
     const getproductData = async () => {
       // setloading(true)
-      const response = await fetch("http://802d-183-87-13-43.ngrok.io/watches");
+      const response = await fetch("http://localhost:3344/watches");
       if (componentMounted) {
         setdata(await response.clone().json());
         setfilter(await response.json());
@@ -161,7 +161,7 @@ function Productfilter({ setCart, cart }) {
           <h5>Found {filter.length} Watches</h5>
         </div>
         <div>
-          <Link className="all" onClick={() => setfilter(data)}>
+          <Link  className="all" onClick={() => setfilter(data)}>
             ALL &nbsp;{" "}
           </Link>
           |<Link> &nbsp; BEST SELLERS &nbsp; </Link>|
