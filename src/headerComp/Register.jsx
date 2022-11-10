@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 import Headertop from "./Headertop";
 import { Link, useHistory } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
@@ -14,13 +16,25 @@ const Register = () => {
     else if(!localStorage.getItem("user-info")){
       history.push("/signup")
     }
-  }, []);
+  }, [],()=>{console.log("USEEFFECT")});
 
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const history = useHistory();
 
+  const notify = (username,email,password) => {
+   if( username === "invalid")
+    toast("Invalid username!");
+
+    if(email === "Please enter a valid email!"){
+      toast("Invalid email!");
+    }
+    if(password === "Minimum eight characters, at least one letter and one number"){
+      toast("Invalid Password!");
+    }
+
+  }
   async function signUp(e) {
     e.preventDefault();
     let item = { name, email, password };
@@ -36,19 +50,22 @@ const Register = () => {
     });
     result = await result.json();
     console.warn("result", result);
-
+    
     if (usermsg === "invalid") {
-      alert("Required fields are empty or INVALID");
+     notify();
+     
     } else if (
       passmsg === "Minimum eight characters, at least one letter and one number"
     ) {
-      alert("Required fields are empty or INVALID");
+      // toast("Required fields are empty or INVALID");
+      notify();
     } else if (passmsg === "password looks good") {
       
       history.push("/");
       localStorage.setItem("user-info", JSON.stringify(result));
     } else if (message === "Please enter a valid email!") {
-      alert("Required fields are empty or INVALID");
+      // toast("Required fields are empty or INVALID");
+      notify();
     }
     
   }
@@ -188,6 +205,7 @@ const Register = () => {
           // ref={buttonRef}
        
             type="submit"
+            onMouseDown= {()=> notify(usermsg,message,passmsg)}
             onClick={(e) => {
               {
                 signUp(e);
@@ -213,8 +231,10 @@ const Register = () => {
           <button>
             <img src="assets/images/logo/meta.png" /> Sign Up with Meta
           </button>
+         
         </div>
       </form>
+      <ToastContainer />
     </>
   );
 };

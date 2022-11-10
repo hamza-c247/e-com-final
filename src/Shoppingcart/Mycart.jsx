@@ -70,7 +70,7 @@ const Mycart = ({ adjustQty }) => {
 
   const CartItems = (cartitem, idx) => {
     const submit = () => {
-
+console.log("clickedddd")
       confirmAlert({
         title: 'Confirm to Remove',
         message: 'remove this item ?',
@@ -239,10 +239,10 @@ const Mycart = ({ adjustQty }) => {
     </>
   );
 };
-const mapDispatchtoProps = (dispatch) => {
-  return {
-    adjustQty: (id, value) => dispatch(adjustQty(id, value)),
-  };
-};
+// const mapDispatchtoProps = (dispatch) => {
+//   return {
+//     adjustQty: (id, value) => dispatch(adjustQty(id, value)),
+//   };
+// };
 
-export default connect(null, mapDispatchtoProps)(Mycart);
+export default (Mycart);

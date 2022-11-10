@@ -10,10 +10,10 @@ function Login() {
 
   const history = useHistory();
   useEffect(() => {
-    if (localStorage.getItem("username")) {
+    if (localStorage.getItem("user-info")) {
       history.push("/");
     }
-    else if(!localStorage.getItem("username")){
+    else if(!localStorage.getItem("user-info")){
       history.push("/login")
     }
   }, []);
